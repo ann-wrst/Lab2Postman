@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "dc598fed-bfa1-47db-8c84-a9acefcc5308",
+		"name": "lab2tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "POST: api/Customers positive",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"Анна Аннівна\",\n\t\"Email\": \"testemail@gmail.com\",\n\t\"Address\" :\"вул. Незалежності України, 48\",\n\t\"phoneNumber\": \"+380952003020\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Customers",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: api/Customers/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n \t\"id\": 5,\n \t\"Name\":\"Олександра Ол\",\n \t\"Email\":\"greatemail@gmail.com\",\n \t\"Address\": \"вул. Чудова, 56\",\n \t\"phoneNumber\": \"+380952003020\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}//Customers/5",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"",
+								"Customers",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: api/Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Customers",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: api/Customers/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Customers/6",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: api/Customers/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Customers/6",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST: api/Customers negative Name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"Анна\",\n\t\"Email\": \"testemail@gmail.com\",\n\t\"Address\" :\"вул. Незалежності України, 48\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Customers",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST: api/Customers negative Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"Анна Аннівна\",\n\t\"Email\": \"testemailgmail.com\",\n\t\"Address\" :\"вул. Незалежності України, 48\",\n\t\"phoneNumber\": \"+380952003020\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Customers",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Customers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "POST: api/Orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"CustomerId\":2,\n\t\"OrderTime\":\"2019-12-09T00:00:00.000Z\",\n\t\"Bill\":400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Orders",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: api/Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Orders",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: api/Orders/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":10,\n\t\"CustomerId\":4,\n\t\"OrderTime\":\"2019-12-09T00:00:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Orders/10",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Orders",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: api/Orders/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Orders/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: api/Orders/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Orders/10",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Orders",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "OrderPizzas",
+			"item": [
+				{
+					"name": "// GET: api/OrderPizzas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderPizzas",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderPizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// POST: api/OrderPizzas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"OrderId\":1,\n\t\"PizzaId\":2,\n\t\"Quantity\" :3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/OrderPizzas",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderPizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// PUT: api/OrderPizzas/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":3,\n\t\"OrderId\":1,\n\t\"PizzaId\":2,\n\t\"Quantity\" :1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/OrderPizzas/3",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderPizzas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// GET: api/OrderPizzas/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderPizzas/3",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderPizzas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// DELETE: api/OrderPizzas/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderPizzas/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderPizzas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pizzas",
+			"item": [
+				{
+					"name": "// GET: api/Pizzas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Pizzas",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "// POST: api/Pizzas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\":\"Гавайська\",\n\t\"Price\": 150\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Pizzas",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: api/Pizzas/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Pizzas/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Pizzas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: api/Pizzas/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"Name\":\"Салямі\",\n\t\"Price\": 180\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Pizzas/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Pizzas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: api/Pizzas/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Pizzas/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Pizzas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cook",
+			"item": [
+				{
+					"name": "POST: api/Cooks/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\": \"Олеся Олесівна\",\n\t\"Experience\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Cooks",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Cooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Cooks",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Cooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Cooks/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Cooks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"Name\": \"Олеся Олесівна\",\n\t\"Experience\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/Cooks/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Cooks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/Cooks/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"Cooks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "OrderCooking",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"CookId\":2,\n\t\"OrderId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/OrderCookings",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderCookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderCookings",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderCookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderCookings/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderCookings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":1,\n\t\"CookId\":3,\n\t\"OrderId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url1}}/OrderCookings/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderCookings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url1}}/OrderCooking/1",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"OrderCooking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
